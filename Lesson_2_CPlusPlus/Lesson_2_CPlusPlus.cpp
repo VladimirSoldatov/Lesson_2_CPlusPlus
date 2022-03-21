@@ -9,9 +9,10 @@ using namespace std;
 
 int main()
 {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     for (int i = 0; i < 5; i++)
     {
-        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+  
         SetConsoleTextAttribute(hConsole, 10);
         int name = 0;
         cout << "Enter number between 1 and 3: ";
@@ -32,11 +33,10 @@ int main()
             break;
         }
     }
-    
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-        SetConsoleTextAttribute(hConsole, 10);
- 
+    SetConsoleTextAttribute(hConsole, 12);
+    int s;
+    scanf_s("%i", &s);
+    printf("%i", s);
     
 
     
